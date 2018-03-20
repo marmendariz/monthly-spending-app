@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "material-ui": "0.20.0",
     "react": "^16.2.0",
+    "react-collapse": "^4.0.3",
+    "react-columns": "1.2.0",
     "react-dom": "^16.2.0",
+    "react-flexbox-grid": "2.0.0",
+    "react-motion": "^0.5.2",
     "react-scripts": "1.1.1"
   },
   "scripts": {

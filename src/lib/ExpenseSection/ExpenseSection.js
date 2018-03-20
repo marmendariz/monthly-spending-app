@@ -6,11 +6,14 @@ class ExpenseSection extends Component{
     constructor(props){
         super(props);
         this.state = {
-            value: ''
+            value: '',
+            sectionTitle: this.props.sectionTitle,
+            sectionFields: this.props.sectionFields
         };
     }
 
     handleChange = (event) => {
+        //TODO: add validation here
         this.setState({
             value: event.target.value,
         });
@@ -18,16 +21,26 @@ class ExpenseSection extends Component{
 
     render(){
 
-        return (
-            <div>
-                <div>
-                    1. Giving (  %)
-                </div>
-                An Expense Here: 
-                <TextField floatingLabelText="Dollar Amount"
+        const sectionFields = this.state.sectionFields.map((field, index)=>{
+
+            return(
+                <TextField floatingLabelText={field.label}
                            hintText="0.00"
-                           value={this.state.value}
-                           onChange={this.handleChange}/>
+                           onChange={this.handleChange}
+                           value={this.state.value}/>
+            );
+        });
+
+        return (
+            <div class="ExpenseSection">
+
+                <div class="ExpenseMainTitle">
+                    {this.state.sectionTitle}
+                </div>
+                <div>
+                    {sectionFields}
+                </div>
+
             </div>
         );
 
