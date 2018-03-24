@@ -1,0 +1,19 @@
+.ExpenseSection{
+    position: relative;
+    max-width: 300px;
+
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.ExpenseMainTitle{
+    position: relative;
+}
+.ExpenseMainTitle p{
+    height: 10px;
+}
+
+.ExpenseInputField{
+    position: relative;
+}

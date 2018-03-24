@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import TextField from 'material-ui/TextField'
+import './ExpenseSection.css';
 
 class ExpenseSection extends Component{
 
@@ -19,28 +20,38 @@ class ExpenseSection extends Component{
         });
     };
 
-    render(){
-
-        const sectionFields = this.state.sectionFields.map((field, index)=>{
+    renderSectionTextFields(){
+        let sectionFields = this.state.sectionFields.map((field, index)=>{
 
             return(
+                <div className="ExpenseInputField">
                 <TextField floatingLabelText={field.label}
                            hintText="0.00"
                            onChange={this.handleChange}
-                           value={this.state.value}/>
+                           value={this.state.value}/><br/>
+                </div>
             );
         });
 
-        return (
-            <div class="ExpenseSection">
+        return sectionFields;  
+    }
 
-                <div class="ExpenseMainTitle">
-                    {this.state.sectionTitle}
+    render(){
+
+        const sectionFields = this.renderSectionTextFields();
+        const title = this.state.sectionTitle;
+
+        return (
+            <div className="ExpenseSection">
+
+                <div className="ExpenseMainTitle">
+                    <p>{title}</p>
                 </div>
+
                 <div>
                     {sectionFields}
                 </div>
-
+                
             </div>
         );
 

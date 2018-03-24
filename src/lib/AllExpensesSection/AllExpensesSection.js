@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ExpenseSection from '../ExpenseSection/ExpenseSection';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import './AllExpensesSection.css';
 
 
 class AllExpensesSection extends Component{
@@ -21,7 +22,10 @@ class AllExpensesSection extends Component{
                     sectionTitle: "Giving",
                     sectionFields: [{
                         label: "Church/Missionaries/Organizations"
-                        }
+                        },
+                        {
+                        label: "Other"
+                        },
                     ]
                 },
                 {
@@ -30,7 +34,7 @@ class AllExpensesSection extends Component{
                         label: "Emergency"
                         }
                     ]
-                },
+                }/*,
                 {
                     sectionTitle: "Debt",
                     sectionFields: [{
@@ -82,7 +86,7 @@ class AllExpensesSection extends Component{
                         label: ""
                         }
                     ]
-                },
+                },*/
             ]
         });
     }
@@ -103,7 +107,7 @@ class AllExpensesSection extends Component{
 
         return (
             <div id="AllExpensesSection">
-            {sections}
+                {sections}
             </div>
         );
 
