@@ -20,10 +20,10 @@ class MonthlySpendingApp extends Component {
               />
         <div className="App">
           
-          <header className="App-header">
+          {/*<header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Monthly Spending with React</h1>
-          </header>
+            </header>*/}
 
           <p className="App-intro">
             SPEND LESS THAN YOU EARN | 

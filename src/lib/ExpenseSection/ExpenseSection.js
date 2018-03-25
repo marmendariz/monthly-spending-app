@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import TextField from 'material-ui/TextField'
-import './ExpenseSection.css';
+import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card';
+//import './ExpenseSection.css';
+import '../../App.css';
 
 class ExpenseSection extends Component{
 
@@ -25,10 +27,11 @@ class ExpenseSection extends Component{
 
             return(
                 <div className="ExpenseInputField">
-                <TextField floatingLabelText={field.label}
-                           hintText="0.00"
-                           onChange={this.handleChange}
-                           value={this.state.value}/><br/>
+                    <TextField floatingLabelText={field.label}
+                            hintText="0.00"
+                            onChange={this.handleChange}
+                            value={this.state.value}/>
+                    <br/>
                 </div>
             );
         });
@@ -43,15 +46,19 @@ class ExpenseSection extends Component{
 
         return (
             <div className="ExpenseSection">
-
-                <div className="ExpenseMainTitle">
-                    <p>{title}</p>
-                </div>
-
-                <div>
-                    {sectionFields}
-                </div>
-                
+                <Card>
+                    <CardHeader
+                        title={title}
+                        subTitle="subTitle"
+                        actAsExpander={true}
+                        showExpandableButton={true}/>
+                    {/*<CardActions>
+                        {sectionFields}
+                    </CardActions>*/}
+                    <CardText className="ExpenseSectionFields" expandable={true}>
+                        {sectionFields}
+                    </CardText>
+                </Card>
             </div>
         );
 

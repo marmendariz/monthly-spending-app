@@ -34,7 +34,7 @@ class AllExpensesSection extends Component{
                         label: "Emergency"
                         }
                     ]
-                }/*,
+                },
                 {
                     sectionTitle: "Debt",
                     sectionFields: [{
@@ -53,7 +53,7 @@ class AllExpensesSection extends Component{
                     ]
                 },
                 {
-                    sectionTitle: "Insurance - paid by you",
+                    sectionTitle: "Insurance (paid by me)",
                     sectionFields: [{
                         label: "Auto"
                         }
@@ -86,7 +86,7 @@ class AllExpensesSection extends Component{
                         label: ""
                         }
                     ]
-                },*/
+                },
             ]
         });
     }
@@ -100,7 +100,7 @@ class AllExpensesSection extends Component{
         //get our ExpenseSection markup
         let sections = this.state.allExpenses.map((section, index)=>{
             return(
-                <ExpenseSection sectionTitle={index+1 + ". " + section.sectionTitle}
+                <ExpenseSection sectionTitle={section.sectionTitle}
                                 sectionFields={section.sectionFields}/>
             );
         });

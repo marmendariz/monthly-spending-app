@@ -18,11 +18,18 @@
   font-size: 1.5em;
 }
 
-.App-intro {
+/*.App-intro {
   font-size: large;
-}
+}*/
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+p { 
+  font-size: 15px;
+}
+span{
+  font-size: 25px;
 }
